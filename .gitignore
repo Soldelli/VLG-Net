@@ -1,0 +1,26 @@
+# Useless stuff
+.vector_cache/
+
+datasets/activitynet1.3
+datasets/charades-sta
+datasets/didemo
+datasets/stanford-corenlp-4.0.0
+datasets/tacos
+datasets/gcnext_warmup
+
+lib/config/__pycache__/*.pyc
+lib/data/__pycache__/*.pyc
+lib/data/datasets/__pycache__/*.pyc
+lib/data/datasets/__pycache__/*.*.pyc
+lib/data/datasets/__pycache__/activitynet.cpython-37.pyc
+lib/engine/__pycache__/*.pyc
+lib/modeling/__pycache__/*.pyc
+lib/utils/__pycache__/*.pyc
+lib/__pycache__/*.pyc
+lib/structures/__pycache__/*.pyc
+
+models/activitynet
+models/didemo
+models/tacos
+outputs/
+logs/

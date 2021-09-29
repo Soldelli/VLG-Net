@@ -1,0 +1,61 @@
+MODEL:
+  ARCHITECTURE: "VLG"
+  PRETRAINV: 'datasets/gcnext_warmup/gtad_best.pth.tar'
+  VLG:
+    NUM_CLIPS: 64
+    FEATPOOL:
+      INPUT_SIZE: 500 
+      HIDDEN_SIZE: 512
+      KERNEL_SIZE: 4
+      DROPOUT: 0.0            
+      POS: 'cos' 
+      GROUPS: 32
+      WIDTH_GROUP: 4
+      NUM_AGGREGATOR_LAYERS: 1
+      NUM_NEIGHBOURS: 9
+    FEAT2D:
+      POOLING_COUNTS: [15,8,8]
+    MATCH:
+      DROPOUT_GM: 0.0
+      NUM_NEIGHBOURS: 7
+      GROUPS: 4
+      WIDTH_GROUP: 32
+    INTEGRATOR:
+      NUM_AGGREGATOR_LAYERS: 4
+      QUERY_HIDDEN_SIZE: 512
+      DROPOUT_LINEAR: 0.0     
+      DROPOUT_SGCN: 0.0       
+      LSTM:
+        NUM_LAYERS: 4
+        BIDIRECTIONAL: False
+        DROPOUT: 0.0          
+    MOMENT_POOLING:
+      ATTENTION_MODE: 'cross_learnable' 
+    PREDICTOR:
+      DROPOUT_CONV: 0.0
+      HIDDEN_SIZE: 512
+      KERNEL_SIZE: 1
+      NUM_STACK_LAYERS: 1
+      POS: 'cos'      
+    LOSS:
+      MIN_IOU: 0.7  
+      MAX_IOU: 0.71 
+DATASETS:
+  TRAIN: ("activitynet_train",) 
+  VAL: ("activitynet_val",)     
+  TEST: ("activitynet_test",)   
+INPUT:
+  NUM_PRE_CLIPS: 256
+  PRE_QUERY_SIZE: 300
+DATALOADER:
+  NUM_WORKERS: 12
+SOLVER:
+  LR: 0.0002
+  LR_STEP_SIZE: 10
+  LR_GAMMA: 0.5
+  BATCH_SIZE: 32 
+  MILESTONES: (5,)
+  MAX_EPOCH: 50
+TEST:
+  BATCH_SIZE: 32
+  NMS_THRESH: 0.5

@@ -1,0 +1,61 @@
+MODEL:
+  ARCHITECTURE: "VLG"
+  PRETRAINV: 'datasets/gcnext_warmup/gtad_best.pth.tar'
+  VLG:
+    NUM_CLIPS: 256
+    FEATPOOL:
+      INPUT_SIZE: 4096
+      HIDDEN_SIZE: 512
+      KERNEL_SIZE: 1
+      DROPOUT: 0.1
+      POS: 'none'
+      GROUPS: 32
+      WIDTH_GROUP: 4
+      NUM_AGGREGATOR_LAYERS: 4
+      NUM_NEIGHBOURS: 3
+    FEAT2D:
+      POOLING_COUNTS: [5,8,8,8]
+    MATCH:
+      DROPOUT_GM: 0.0
+      NUM_NEIGHBOURS: 3
+      GROUPS: 32
+      WIDTH_GROUP: 4
+    INTEGRATOR:
+      NUM_AGGREGATOR_LAYERS: 2
+      QUERY_HIDDEN_SIZE: 512
+      DROPOUT_LINEAR: 0.1
+      DROPOUT_SGCN: 0.0
+      LSTM:
+        NUM_LAYERS: 5
+        BIDIRECTIONAL: False
+        DROPOUT: 0.1 
+    MOMENT_POOLING:
+      ATTENTION_MODE: 'cross_learnable' 
+    PREDICTOR:
+      POS: 'cos'
+      HIDDEN_SIZE: 512 
+      KERNEL_SIZE: 1
+      DROPOUT_CONV: 0.1
+      NUM_STACK_LAYERS: 1
+    LOSS:
+      MIN_IOU: 0.5
+      MAX_IOU: 0.7
+DATASETS:
+  TRAIN: ("tacos_train",) 
+  VAL: ("tacos_val",) 
+  TEST: ("tacos_test",) 
+INPUT:
+  NUM_PRE_CLIPS: 256
+  PRE_QUERY_SIZE: 300
+DATALOADER:
+  NUM_WORKERS: 12
+SOLVER:
+  LR: 0.001
+  LR_STEP_SIZE: 20
+  LR_GAMMA: 0.1 
+  BATCH_SIZE: 32
+  MILESTONES: (5,)
+  MAX_EPOCH: 50
+TEST:
+  NMS_THRESH: 0.3
+  BATCH_SIZE: 4
