@@ -1,13 +1,6 @@
 # VLG-Net: Video-Language Graph Matching Networks for Video Grounding
 
 ## Introduction
-@inproceedings{soldan2021vlg,
-  title={VLG-Net: Video-Language Graph Matching Network for Video Grounding},
-  author={Soldan, Mattia and Xu, Mengmeng and Qu, Sisi and Tegner, Jesper and Ghanem, Bernard},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={3224--3234},
-  year={2021}
-}
 Official repository for VLG-Net: Video-Language Graph Matching Networks for Video Grounding. [[ArXiv Preprint](https://arxiv.org/abs/2011.10132)]
 
 The paper is accepted to the first edition fo the ICCV workshop: AI for Creative Video Editing and Understanding (CVEU).
