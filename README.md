@@ -1,7 +1,7 @@
 # VLG-Net: Video-Language Graph Matching Networks for Video Grounding
 
 ## Introduction
-Official repository for VLG-Net: Video-Language Graph Matching Networks for Video Grounding. [[ArXiv Preprint](https://arxiv.org/abs/2011.10132)]
+Official repository for VLG-Net: Video-Language Graph Matching Networks for Video Grounding. [[ArXiv Preprint](https://arxiv.org/abs/2011.10132),[Video Presentation](https://youtu.be/u9IwxnDCb68)]
 
 The paper is accepted to the first edition fo the ICCV workshop: AI for Creative Video Editing and Understanding (CVEU).
 
