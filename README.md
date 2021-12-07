@@ -5,7 +5,7 @@ Official repository for VLG-Net: Video-Language Graph Matching Networks for Vide
 
 The paper is accepted to the first edition fo the ICCV workshop: AI for Creative Video Editing and Understanding (CVEU).
 
-<div align="center" valign="middle"><img height="250px" src="https://drive.google.com/uc?export=view&id=1rHynEtDmSN1Kn0qsPlYyJUhidMqCOY0m"></div>
+![architecture](https://user-images.githubusercontent.com/26504816/145061131-126f9341-432a-4351-ab56-679150f5f7c9.png)
 
 
 # Installation
