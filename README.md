@@ -8,7 +8,7 @@ The paper is accepted to the first edition fo the ICCV workshop: AI for Creative
 ![architecture](https://user-images.githubusercontent.com/26504816/145061131-126f9341-432a-4351-ab56-679150f5f7c9.png)
 
 
-# Installation
+## Installation
 
 Clone the repository and move to folder:
 ```bash
@@ -23,7 +23,7 @@ conda env create -f environment.yml
 
 If installation fails, please follow the instructions in file `doc/environment.md` [(link)](doc/environment.md).
 
-# Data
+## Data
 Download the following resources and extract the content in the appropriate destination folder. See table. 
 
 | **Resource** | Download Link  | File Size | Destination Folder |
@@ -74,7 +74,7 @@ The folder structure should be as follows:
 └── scripts
 ```
 
-# Training
+## Training
 
 Copy paste the following commands in the terminal. </br>
 
@@ -93,7 +93,7 @@ python train_net.py --config-file configs/activitynet.yml OUTPUT_DIR outputs/act
 python train_net.py --config-file configs/tacos.yml OUTPUT_DIR outputs/tacos
 ```
 
-# Evaluation
+## Evaluation
 For simplicity we provide scripts to automatically run the inference on pretrained models. See script details if you want to run inference on a different model. </br>
 
 Load environment: 
@@ -113,7 +113,7 @@ Then run one of the following scripts to launch the evaluation.
     bash scripts/tacos.sh
 ```
 
-# Expected results:
+## Expected results:
 After cleaning the code and fixing a couple of minor bugs, performance changed (slightly) with respect to reported numbers in the paper. See below table.
 
 | **ActivityNet** | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 |
@@ -129,7 +129,7 @@ After cleaning the code and fixing a couple of minor bugs, performance changed (
 </br>
 
 
-# Citation
+## Citation
 If any part of our paper and code is helpful to your work, please  cite with:
 ```
 @inproceedings{soldan2021vlg,
