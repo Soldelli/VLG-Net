@@ -24,3 +24,9 @@ models/didemo
 models/tacos
 outputs/
 logs/
+datasets/
+*.pyc
+*/*.pyc
+*/*/*.pyc
+*/*/*/*.pyc
+

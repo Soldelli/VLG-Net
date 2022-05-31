@@ -1,6 +1,6 @@
 import torch
 
-if torch._six.PY3:
+if torch._six.PY37:
     import importlib
     import importlib.util
     import sys
